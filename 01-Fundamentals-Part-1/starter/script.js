@@ -170,3 +170,37 @@ if (averageScoreDolphins > averageScoreKoalas && averageScoreDolphins >= minScor
 } else {
     console.log("The Koalas are the winner!")
 }
+
+
+const day = 'tuesday'
+
+switch (day) {
+    case 'monday':
+        console.log('its mo');
+        break;
+    case 'tuesday':
+        console.log("its tue");
+        break;
+    case 'wednesday':
+        console.log("its wed");
+        break;
+    case 'thursday':
+    case 'friday':
+        console.log("its weeekend");
+        break;
+    default:
+        console.log("no weekday!")
+}
+
+
+if (day === 'monday') {
+    console.log('its mo');
+} else if (day === 'tuesday') {
+    console.log("its tue");
+} else if (day === "wednesday") {
+    console.log("its wed");
+} else if (day === "thursday" || day === "friday") {
+    console.log("its weeekend");
+} else {
+    console.log("no weekday!")
+}
