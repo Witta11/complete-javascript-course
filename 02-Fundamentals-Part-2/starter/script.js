@@ -143,3 +143,114 @@ function checkWinner(avgDolhins, avgKoalas) {
 }
 
 checkWinner(scoreDolphins, scoreKoalas);
+
+// Arrays
+
+const thisIsAnArray = ['Noalen', 'Peter', 'Maria', 'Gustav'];
+console.log(thisIsAnArray);
+
+const years = new Array(1992, 1993, 1994);
+
+console.log(thisIsAnArray[1]);
+
+console.log(years.length);
+
+//change array items
+years[0] = 1990;
+
+console.log(years[0], years[1], years[2]);
+
+// add to beginning
+thisIsAnArray.unshift('Witta');
+
+console.log(thisIsAnArray);
+
+// remove last item
+thisIsAnArray.pop();
+console.log(thisIsAnArray);
+
+// remove first item
+thisIsAnArray.shift();
+console.log(thisIsAnArray);
+console.log(thisIsAnArray.indexOf("Noalen"));
+
+// check if item is in array
+console.log(thisIsAnArray.includes("Witta"));
+
+
+// CODING CHALLENGE 2.2
+/*
+Steven is still building his tip calculator, using the same rules as before: Tip 15% of
+the bill if the bill value is between 50 and 300, and if the value is different, the tip is
+20%.
+Your tasks:
+1. Write a function 'calcTip' that takes any bill value as an input and returns
+the corresponding tip, calculated based on the rules above (you can check out
+the code from first tip calculator challenge if you need to). Use the function
+type you like the most. Test the function using a bill value of 100
+2. And now let's use arrays! So create an array 'bills' containing the test data
+below
+3. Create an array 'tips' containing the tip value for each bill, calculated from
+the function you created before
+4. Bonus: Create an array 'total' containing the total values, so the bill + tip
+Test data: 125, 555 and 44
+Hint: Remember that an array needs a value in each position, and that value can
+actually be the returned value of a function! So you can just call a function as array
+values (so don't store the tip values in separate variables first, but right in the new
+array)
+*/
+
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+
+const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+console.log(tips);
+console.log(total);
+
+// Objects with key/ value pairs or properties
+
+const thisisanObject = {
+    firstName: "Witta",
+    lastName: "Glöckner",
+    age: 2020 - 1998,
+    job: 'Developer',
+    friends: ['none', 'some', 'many']
+}
+
+// get values:
+
+console.log(thisisanObject.firstName);
+// or
+console.log(thisisanObject["firstName"]);
+
+/*
+const question = prompt("What do you wanna know about me?");
+
+if (thisisanObject[question]) {
+    console.log(thisisanObject[question]);
+} else {
+    console.log("Naah, cant tell you!");
+}
+*/
+
+// add key-value to object:
+thisisanObject['location'] = 'Black Forest';
+console.log(thisisanObject);
+
+// Object Methods
+// functions can be a value in an object
+// this is refering to the object name here: witta
+const witta = {
+    birthYear: 1998,
+    calcAge: function () {
+        return 2020 - this.birthYear;
+    },
+    name: 'Witta'
+};
+
+console.log(witta.calcAge());
